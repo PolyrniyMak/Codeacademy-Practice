@@ -1,0 +1,53 @@
+--1--
+SELECT * FROM orders 
+LIMIT 10;
+--1--
+
+
+--2--
+SELECT DISTINCT order_date FROM orders
+ORDER BY order_date DESC;
+--2--
+
+
+--3--
+SELECT special_instructions FROM orders 
+LIMIT 20;
+--3--
+
+
+--4--
+SELECT special_instructions FROM orders
+WHERE special_instructions IS NOT NULL;
+--4--
+
+
+--5--
+SELECT special_instructions FROM orders
+WHERE special_instructions IS NOT NULL
+ORDER BY special_instructions ASC;
+--5--
+
+
+--6--
+SELECT special_instructions FROM orders
+WHERE special_instructions LIKE '%sauce%';
+--6--
+
+
+--7--
+SELECT special_instructions FROM orders
+WHERE special_instructions LIKE '%door%';
+--7--
+
+
+--8--
+SELECT special_instructions FROM orders
+WHERE special_instructions LIKE '%box%';
+--8--
+
+
+--9--
+SELECT id AS '#', special_instructions AS 'Notes' FROM orders
+WHERE special_instructions LIKE '%box%';
+--9--
